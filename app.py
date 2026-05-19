@@ -15,11 +15,11 @@ st.set_page_config(
 # CARGA DE MODELOS
 # =========================
 
-rf_genre = joblib.load('modelos/rf_genre.pkl')
-rf_mood  = joblib.load('modelos/rf_mood.pkl')
-scaler   = joblib.load('modelos/scaler.pkl')
-le_genre = joblib.load('modelos/le_genre.pkl')
-le_mood  = joblib.load('modelos/le_mood.pkl')
+rf_genre = joblib.load('modeloss/rf_genre.pkl')
+rf_mood  = joblib.load('modeloss/rf_mood.pkl')
+scaler   = joblib.load('modeloss/scaler.pkl')
+le_genre = joblib.load('modeloss/le_genre.pkl')
+le_mood  = joblib.load('modeloss/le_mood.pkl')
 
 # =========================
 # TÍTULO
