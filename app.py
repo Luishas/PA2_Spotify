@@ -1,9 +1,118 @@
 import streamlit as st
+import numpy as np
+import joblib
+
+# =========================
+# CONFIGURACIÓN
+# =========================
+
+st.set_page_config(
+    page_title="Spotify Genre & Mood Classifier",
+    page_icon="🎵",
+    layout="wide"
+)
+# =========================
+# CARGA DE MODELOS
+# =========================
+
+rf_genre = joblib.load('modelos/rf_genre.pkl')
+rf_mood  = joblib.load('modelos/rf_mood.pkl')
+scaler   = joblib.load('modelos/scaler.pkl')
+le_genre = joblib.load('modelos/le_genre.pkl')
+le_mood  = joblib.load('modelos/le_mood.pkl')
+
+# =========================
+# TÍTULO
+# =========================
+
+st.title("🎧 Spotify Genre & Mood Predictor")
+st.markdown(
+    """
+    Ingresa las características de audio de una canción y el modelo predecirá:
+
+    - 🎵 Género musical
+    - 💭 Mood / emoción
+    """
+)
+
+st.divider()
+
+# =========================
+# SIDEBAR
+# =========================
+
+st.sidebar.header("⚙️ Parámetros de audio")
+
+valence = st.sidebar.slider(
+    "Valence (felicidad)",
+    min_value=0.0,
+    max_value=1.0,
+    value=0.5,
+    step=0.01
+)
+
+energy = st.sidebar.slider(
+    "Energy",
+    min_value=0.0,
+    max_value=1.0,
+    value=0.5,
+    step=0.01
+)
+acousticness = st.sidebar.slider(
+    max_value=1.0,
+    value=0.5,
+    step=0.01
+)
+
+danceability = st.sidebar.slider(
+    "Danceability",
+    min_value=0.0,
+    max_value=1.0,
+    value=0.5,
+    step=0.01
+)
+
+tempo = st.sidebar.slider(
+    "Tempo",
+    min_value=50.0,
+    max_value=250.0,
+    value=120.0,
+    step=1.0
+)
+
+loudness = st.sidebar.slider(
+    "Loudness",
+    min_value=-60.0,
+    max_value=5.0,
+    value=-10.0,
+    step=0.5
+)
+
+speechiness = st.sidebar.slider(
+    "Speechiness",
+    min_value=0.0,
+    max_value=1.0,
+    value=0.1,
+    step=0.01
+)
+
+instrumentalness = st.sidebar.slider(
+    "Instrumentalness",
+    min_value=0.0,
+    max_value=1.0,
+    value=0.0,
+    step=0.01
+)
+
+liveness = st.sidebar.slider(
+    "Liveness",
+    min_value=0.0,
+    max_value=1.0,
     value=0.2,
     step=0.01
 )
 
- duration_ms = st.sidebar.slider(
+duration_ms = st.sidebar.slider(
     "Duración (ms)",
     min_value=30000,
     max_value=600000,
