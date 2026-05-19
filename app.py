@@ -37,7 +37,8 @@ st.markdown(
 st.markdown(
     """
     ### 🔗 Proyecto
-
+    
+    - Juan Diego Leon Gonzales | 73865128
     - 📓 [Ver Notebook en Google Colab](https://colab.research.google.com/drive/1WZ6VR5RuJs_UIPZ4k4mJNp3g1G-AQj7I#scrollTo=rnBsuumLlZ1d)
     """
 )
