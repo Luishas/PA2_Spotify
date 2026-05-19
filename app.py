@@ -34,6 +34,13 @@ st.markdown(
     - 💭 Mood / emoción
     """
 )
+st.markdown(
+    """
+    ### 🔗 Proyecto
+
+    - 📓 [Ver Notebook en Google Colab](https://colab.research.google.com/drive/1WZ6VR5RuJs_UIPZ4k4mJNp3g1G-AQj7I#scrollTo=rnBsuumLlZ1d)
+    """
+)
 
 st.divider()
 
