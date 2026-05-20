@@ -1,0 +1,27 @@
+Quiero que me ayudes a crear una aplicación web completa usando Streamlit basada en un notebook de Google Colab que voy a proporcionar.
+
+La aplicación debe utilizar dos modelos de Machine Learning ya entrenados para clasificar canciones de Spotify:
+1. Género musical
+2. Mood/emoción (happy, sad, romantic, energetic, etc.)
+Necesito que analices mi notebook y construyas toda la estructura del proyecto lista para subir a GitHub y desplegar en Streamlit Community Cloud.
+La aplicación debe incluir:
+* Interfaz moderna estilo Spotify
+* Sidebar con sliders interactivos para todas las variables/features usadas por el modelo
+* Inputs numéricos y selectboxes según corresponda
+* Botón de predicción
+* Predicción del género musical
+* Predicción del mood
+* Visualización bonita de resultados con métricas/cards
+Además:
+* Agrega una sección con links a:
+  * mi notebook de Google Colab
+  * mi repositorio GitHub
+Quiero que el proyecto incluya:
+* app.py completo
+* requirements.txt
+* estructura correcta de carpetas
+* manejo de modelos .pkl
+* compatibilidad con GitHub y Streamlit Cloud
+
+Voy a subir mi notebook de Colab para que uses exactamente las features, modelos y lógica que ya entrené.
+
